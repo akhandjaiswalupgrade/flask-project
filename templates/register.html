@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Register</title></head>
+<body>
+  <h2>Register Form</h2>
+
+  {% if error %}
+  <p style="color:red;">{{ error }}</p>
+  {% endif %}
+
+  <form action="/auth/register" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" value="{{ name or '' }}" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="tel" name="mobileno" value="{{ mobileno or '' }}" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block titttle %}
+Login in Future
+{% endblock titttle %}
+
+
+{% block content %}
+<h1 class="redtext">Hello Login to  the AstroBoook!</h1>
+<p>Know your Future Baba.</p>
+
+
+
+<form method="POST" action="/users">
+    <input name="name" placeholder="Your name">
+    <button type="submit">Login in Your Future</button>
+</form>
+
+
+{% endblock %}

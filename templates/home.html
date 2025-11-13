@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block titttle %}
+Home page
+{% endblock titttle %}
+
+
+{% block content %}
+<h1 class="redtext">Hello {{name}} Welcome to the AstroBoook!</h1>
+<p>Know your Future Baba.</p>
+
+
+<form method="POST" action="/future">
+    <input name="name" placeholder="Your name">
+    <input name="DOB" placeholder="Day of Birth">
+    <button type="submit">Know Your Future</button>
+</form>
+
+
+{% endblock %}
