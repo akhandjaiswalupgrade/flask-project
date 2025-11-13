@@ -9,7 +9,7 @@ def login():
 
 
 
-@auth_bp.route('/register', methods=['POST'])
+@auth_bp.route('/register', methods=["GET", "POST"])
 def register():
     if request.method == 'POST':
         name = request.form.get('name', '').strip()

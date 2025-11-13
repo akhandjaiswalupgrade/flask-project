@@ -4,11 +4,11 @@ import sqlite3
 app = Flask(__name__)
 
 @app.route('/')
-def add_user():
+def add_user(name, mobileno):
     conn = sqlite3.connect('data.db')
     cur = conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)")
-    cur.execute("INSERT INTO users (name) VALUES (?)", ("Shiv",))
+    cur.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT, mobileno TEXT)")
+    cur.execute("INSERT INTO users (name, mobileno) VALUES (?, ?), (name, mobileno) ")
     conn.commit()
     conn.close()
     return "User added successfully!"
